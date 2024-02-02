@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Martin Portfolio</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a style="display: inline-block;font-size: 35px;font-weight: 800;" class="navbar-brand" href="#">Martin Portfolio</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadHome()">Main Page</a>
+                </li>
+                <li class="nav-item">
+                    <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadPortfolio()">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Page -->
+    <section id="home" class="container mt-5" >
+        <div class="row" style="display: flex; justify-content: space-around; align-items: center;">
+            <div class="col-md-6">
+                <h1 class="display-3">Martin George</h1>
+                <p class="lead">Welcome to my portfolio, My name is Martin, i am a junior Software Engineer and Student in ALX, i am studying Business at Ain Shams university, i have good learn about: c++, Algorithms, Data structures, basics of Data Base, some of network basics, JavaScript , React.js, OOP and problem solving skills. </p>
+            </div>
+            <div class="col-md-6">
+                <img src="./93579383-6608-4840-8e75-c2a26e12e602.jpeg" alt="Your Name" class="img-fluid" style="width:25rem ;border-radius: 2rem;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Page Placeholder -->
+    <section id="portfolio" class="container mt-5 d-none">
+        <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="col-md-6">
+                <div class="project">
+                    <h2 class="display-4">Project 1 (PDF)</h2>
+                    <p class="lead">This is slide deck, which was the project of Milestone #9 (Wire Frame)</p>
+                    <a href="./Milestone08_Martin_George_09.12.2023_2.pdf" target="_blank" class="btn btn-primary btn-lg">View PDF</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project">
+                    <h2 class="display-4">Project 2 (Video)</h2>
+                    <p class="lead">This is the video which was in Milestone #8</p>
+                    <a href="https://youtu.be/OnLNtxy80Nk" target="_blank" class="btn btn-primary btn-lg">Watch Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and jQuery (Make sure to include them at the end of the body) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript to toggle between Home and Portfolio sections -->
+    <script>
+        function loadPortfolio() {
+            document.getElementById("home").classList.add("d-none");
+            document.getElementById("portfolio").classList.remove("d-none");
+        }
+
+        function loadHome() {
+            document.getElementById("home").classList.remove("d-none");
+            document.getElementById("portfolio").classList.add("d-none");
+        }
+
+    </script>
+</body>
+</html>
