@@ -20,6 +20,9 @@
                 <li class="nav-item">
                     <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadPortfolio()">Portfolio</a>
                 </li>
+                <li class="nav-item">
+                    <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadElevator()">Elevator Pitch</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -28,7 +31,7 @@
     <section id="home" class="container mt-5" >
         <div class="row" style="display: flex; justify-content: space-around; align-items: center;">
             <div class="col-md-6">
-                <h1 class="display-3">Martin George</h1>
+                <h1 class="display-3" style="font-size: 40px;">Martin George</h1>
                 <p class="lead">Welcome to my portfolio, My name is Martin, i am a junior Software Engineer and Student in ALX, i am studying Business at Ain Shams university, i have good learn about: c++, Algorithms, Data structures, basics of Data Base, some of network basics, JavaScript , React.js, OOP and problem solving skills. </p>
             </div>
             <div class="col-md-6">
@@ -57,6 +60,10 @@
         </div>
     </section>
 
+    <section id="elevator" class="container mt-5 d-none">
+        
+    </section>
+
     <!-- Bootstrap JS and jQuery (Make sure to include them at the end of the body) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -65,12 +72,20 @@
     <script>
         function loadPortfolio() {
             document.getElementById("home").classList.add("d-none");
+            document.getElementById("elevator").classList.add("d-none");
             document.getElementById("portfolio").classList.remove("d-none");
         }
 
         function loadHome() {
             document.getElementById("home").classList.remove("d-none");
             document.getElementById("portfolio").classList.add("d-none");
+            document.getElementById("elevator").classList.add("d-none");
+        }
+
+        function loadElevator () {
+            document.getElementById("home").classList.add("d-none");
+            document.getElementById("portfolio").classList.add("d-none");
+            document.getElementById("elevator").classList.remove("d-none");
         }
 
     </script>
