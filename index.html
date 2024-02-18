@@ -11,6 +11,23 @@
         background-color: #f8f9fa;
         padding: 50px;
     }
+    #contact {
+    padding: 50px 0;
+}
+#contact .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
     </style>
 </head>
 <body>
@@ -29,6 +46,9 @@
                 <li class="nav-item">
                     <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadElevator()">Elevator Pitch</a>
                 </li>
+                <li class="nav-item">
+                    <a style="display: inline-block;font-size: 25px;font-weight: 400;" class="nav-link" href="#" onclick="loadContact()">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -38,7 +58,11 @@
         <div class="row" style="display: flex; justify-content: space-around; align-items: center;">
             <div class="col-md-6">
                 <h1 class="display-3" style="font-size: 40px;">Martin George</h1>
-                <p class="lead">Welcome to my portfolio, My name is Martin, i am a junior Software Engineer and Student in ALX, i am studying Business at Ain Shams university, i have good learn about: c++, Algorithms, Data structures, basics of Data Base, some of network basics, JavaScript , React.js, OOP and problem solving skills. </p>
+                <p class="lead">Welcome to my portfolio! I'm Martin, a junior Software Engineer currently pursuing studies in Business at Ain Shams University and enrolled in the ALX program. My passion for technology fuels my journey into software development, where I've cultivated a solid foundation in various programming languages and concepts.
+
+                    Academically, I've delved into C++, Algorithms, Data Structures, and Database Management essentials. Moreover, I've deepened my understanding of networking principles. In the domain of web development, I've honed skills in JavaScript and React.js, crafting dynamic, user-centric interfaces.
+                    
+                    Embracing Object-Oriented Programming, I approach problem-solving with structure and precision. Committed to growth, I leverage my expertise to overcome challenges and contribute meaningfully to software projects. With a blend of academic rigor and practical experience, I'm ready to thrive in the ever-evolving landscape of software engineering. </p>
             </div>
             <div class="col-md-6">
                 <img src="./93579383-6608-4840-8e75-c2a26e12e602.jpeg" alt="Your Name" class="img-fluid" style="width:25rem ;border-radius: 2rem;">
@@ -53,14 +77,14 @@
                 <div class="project">
                     <h2 class="display-4">Project 1 (PDF)</h2>
                     <p class="lead">This is slide deck, which was the project of Milestone #9 (Wire Frame)</p>
-                    <a href="./Milestone08_Martin_George_09.12.2023_2.pdf" target="_blank" class="btn btn-primary btn-lg">View PDF</a>
+                    <a style="display: inline-block; background-color: #343a40!important; border: none;" href="./Milestone08_Martin_George_09.12.2023_2.pdf" target="_blank" class="btn btn-primary btn-lg">View PDF</a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="project">
                     <h2 class="display-4">Project 2 (Video)</h2>
                     <p class="lead">This is the video which was in Milestone #8</p>
-                    <a href="https://youtu.be/OnLNtxy80Nk" target="_blank" class="btn btn-primary btn-lg">Watch Video</a>
+                    <a style="display: inline-block; background-color: #343a40!important; border: none;" href="https://youtu.be/OnLNtxy80Nk" target="_blank" class="btn btn-primary btn-lg">Watch Video</a>
                 </div>
             </div>
         </div>
@@ -93,6 +117,21 @@
           </div>
     </section>
 
+    <section id="contact" class="container mt-5 d-none">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Me</h2>
+                <p>If you're interested in collaborating or have any inquiries, feel free to reach out to me via email or connect with me on LinkedIn:</p>
+                <ul>
+                    <li>Email: <a href="mailto:martingeorge191110@gmail.com">Via Mail</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/martin-george-9b9322299/">Via LinkedIn</a></li>
+                </ul>
+            </div>
+            <img src="https://www.aiet.ac.in/img/contact-img.jpg" alt="Contact" class="img-fluid" style="width: 200px;">
+            </div>
+        </div>
+    </section>
+
     <!-- Bootstrap JS and jQuery (Make sure to include them at the end of the body) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -102,21 +141,33 @@
         function loadPortfolio() {
             document.getElementById("home").classList.add("d-none");
             document.getElementById("elevator").classList.add("d-none");
+            document.getElementById("contact").classList.add("d-none");
             document.getElementById("portfolio").classList.remove("d-none");
         }
 
         function loadHome() {
             document.getElementById("home").classList.remove("d-none");
             document.getElementById("portfolio").classList.add("d-none");
+            document.getElementById("contact").classList.add("d-none");
             document.getElementById("elevator").classList.add("d-none");
         }
 
         function loadElevator () {
             document.getElementById("home").classList.add("d-none");
             document.getElementById("portfolio").classList.add("d-none");
+            document.getElementById("contact").classList.add("d-none");
             document.getElementById("elevator").classList.remove("d-none");
         }
 
+        function loadContact() {
+            document.getElementById("home").classList.add("d-none");
+            document.getElementById("portfolio").classList.add("d-none");
+            document.getElementById("elevator").classList.add("d-none");
+            document.getElementById("contact").classList.remove("d-none");
+}
+document.querySelectorAll("#contact").forEach((ele) => {
+    ele.style.fontSize = `${+ele.style.fontSize+20}px`
+})
     </script>
 </body>
 </html>
